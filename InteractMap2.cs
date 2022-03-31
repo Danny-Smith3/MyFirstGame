@@ -9,13 +9,17 @@ public class InteractMap2 : MonoBehaviour {
     private bool foundBomb = false;
     public bool isAlive = true;
     public Keycard keycardScript;
+    public GameObject upgradeWeapon;
+    public GameObject Healable1;
+    public GameObject Healable2;
+    public GameObject Healable3;
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKey("e")) {
             RaycastHit hit;
             if (Physics.Raycast(camera.position, camera.TransformDirection(Vector3.forward), out hit, 5f)) {
-                if (hit.transform.tag == "Keycard") {
+                if (hit.transform.tag == "Keycard" && isAlive) {
                     if (hit.transform.name == "Keycard1") {
                         Debug.Log("found keycard1");
                         keycardScript.hasKeyCard1 = true;
@@ -75,12 +79,32 @@ public class InteractMap2 : MonoBehaviour {
                     }
                 }
                 if (hit.transform.tag == "AmmoBox" && isAlive) {
+                    //refresh ammo and is unlimited unlike ammo box on map 1
                     Debug.Log("Ammo box found");
                     GunScript gun = gameObject.GetComponent<GunScript>();
                     gun.ammoTotal = 90;
                 }
                 if (hit.transform.tag == "Healable" && isAlive) {
                     //use healable
+                    PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+                    if (playerHealth.health <= 50) {
+                        playerHealth.health += 50;
+                    } else {
+                        playerHealth.health = 100;
+                    }
+                    if (hit.transform.name == "Healable1") {
+                        Healable1.SetActive(false);
+                    } else if (hit.transform.name == "Healable2") {
+                        Healable2.SetActive(false);
+                    } else {
+                        Healable3.SetActive(false);
+                    }
+                }
+                if (hit.transform.tag == "Weapon" && isAlive) {
+                    //upgrade weapon damage
+                    Shooting gun = gameObject.GetComponent<Shooting>();
+                    gun.playerDamage = 25;
+                    upgradeWeapon.SetActive(false);
                 }
             }
         }

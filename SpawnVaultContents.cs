@@ -5,7 +5,9 @@ using UnityEngine;
 public class SpawnVaultContents : MonoBehaviour {
 
     public GameObject ammo;
-    public GameObject healables;
+    public GameObject healable1;
+    public GameObject healable2;
+    public GameObject healable3;
     public GameObject bomb;
     public GameObject weapon;
 
@@ -26,8 +28,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -39,8 +42,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -52,8 +56,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -65,8 +70,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -78,8 +84,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -91,8 +98,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault1x + 7f, 1.135f, vault1z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -104,8 +112,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -117,8 +126,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -130,8 +140,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -143,8 +154,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -156,8 +168,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -169,8 +182,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault2x + 7f, 1.135f, vault2z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -182,8 +196,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -195,8 +210,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -208,8 +224,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -221,8 +238,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -234,8 +252,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -247,8 +266,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault3x + 7f, 11.135f, vault3z);
             ammo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             //healables spawns in vault 4
-            healables.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
-            healables.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            healable1.transform.position = new Vector3(vault4x, 12f, vault4z + 5f);
+            healable2.transform.position = new Vector3(vault4x + 5f, 12f, vault4z + 5f);
+            healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -260,8 +280,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -273,8 +294,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 1
-            healables.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault1x + 5f, 2f, vault1z);
+            healable2.transform.position = new Vector3(vault1x + 5f, 2f, vault1z + 5f);
+            healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -286,8 +308,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -299,8 +322,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 2
-            healables.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault2x + 5f, 2f, vault2z);
+            healable2.transform.position = new Vector3(vault2x + 5f, 2f, vault2z + 5f);
+            healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -312,8 +336,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
@@ -325,8 +350,9 @@ public class SpawnVaultContents : MonoBehaviour {
             ammo.transform.position = new Vector3(vault4x, 11.135f, vault4z + 7f);
             ammo.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //healables spawns in vault 3
-            healables.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
-            healables.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            healable1.transform.position = new Vector3(vault3x + 5f, 12f, vault3z);
+            healable2.transform.position = new Vector3(vault3x + 5f, 12f, vault3z + 5f);
+            healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
             bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
