@@ -13,6 +13,10 @@ public class InteractMap2 : MonoBehaviour {
     public GameObject Healable1;
     public GameObject Healable2;
     public GameObject Healable3;
+    public HealthBarImage healthBar;
+    private bool foundHeal1 = false;
+    private bool foundHeal2 = false;
+    private bool foundHeal3 = false;
 
     // Update is called once per frame
     void Update() {
@@ -71,7 +75,7 @@ public class InteractMap2 : MonoBehaviour {
                 }
                 if (hit.transform.name == "Bomb" && isAlive) {
                     Debug.Log("Bomb found");
-                    Timer bomb = hit.transform.GetComponent<Timer>();
+                    TimerMap2 bomb = hit.transform.GetComponent<TimerMap2>();
                     Debug.Log("Bomb Disarmed");
                     if (!foundBomb) {
                         bomb.bombDisable();
@@ -86,22 +90,46 @@ public class InteractMap2 : MonoBehaviour {
                 }
                 if (hit.transform.tag == "Healable" && isAlive) {
                     //use healable
+                    Debug.Log("Found healable");
                     PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
-                    if (playerHealth.health <= 50) {
-                        playerHealth.health += 50;
-                    } else {
-                        playerHealth.health = 100;
-                    }
-                    if (hit.transform.name == "Healable1") {
+                    if (hit.transform.name == "Healable1" && !foundHeal1) {
+                        Debug.Log("Found healable1");
                         Healable1.SetActive(false);
-                    } else if (hit.transform.name == "Healable2") {
+                        foundHeal1 = true;
+                        if (playerHealth.health < 50) {
+                            playerHealth.health += 50;
+                            healthBar.gainHealth();
+                        } else {
+                            playerHealth.health = 100;
+                            healthBar.maxHealth();
+                        }
+                    } else if (hit.transform.name == "Healable2" && !foundHeal2) {
+                        Debug.Log("Found healable2");
                         Healable2.SetActive(false);
-                    } else {
+                        foundHeal2 = true;
+                        if (playerHealth.health < 50) {
+                            playerHealth.health += 50;
+                            healthBar.gainHealth();
+                        } else {
+                            playerHealth.health = 100;
+                            healthBar.maxHealth();
+                        }
+                    } else if (!foundHeal3) {
+                        Debug.Log("Found healable3");
                         Healable3.SetActive(false);
+                        foundHeal3 = true;
+                        if (playerHealth.health < 50) {
+                            playerHealth.health += 50;
+                            healthBar.gainHealth();
+                        } else {
+                            playerHealth.health = 100;
+                            healthBar.maxHealth();
+                        }
                     }
                 }
                 if (hit.transform.tag == "Weapon" && isAlive) {
                     //upgrade weapon damage
+                    Debug.Log("Found weapon upgrade");
                     Shooting gun = gameObject.GetComponent<Shooting>();
                     gun.playerDamage = 25;
                     upgradeWeapon.SetActive(false);

@@ -30,13 +30,14 @@ public class PlayerHealth : MonoBehaviour {
             if (!gameOver) {
                 StartCoroutine(EndGame());
             }
+        } else {
+            healthText.text = "HP : " + health.ToString();
         }
     }
 
     public void takeDamage(int damage) {
         health -= damage;
         if (health >= 0) {
-            healthText.text = "HP : " + health.ToString();
             healthBar.loseHealth();
         }
     }

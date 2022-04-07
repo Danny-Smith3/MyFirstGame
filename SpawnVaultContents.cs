@@ -33,9 +33,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 2) {
             //ammo spawns in vault 1
@@ -47,9 +47,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 3) {
             //ammo spawns in vault 1
@@ -61,9 +61,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 4) {
             //ammo spawns in vault 1
@@ -75,9 +75,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 5) {
             //ammo spawns in vault 1
@@ -89,9 +89,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 6) {
             //ammo spawns in vault 1
@@ -103,9 +103,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 7) {
             //ammo spawns in vault 2
@@ -117,9 +117,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 8) {
             //ammo spawns in vault 2
@@ -131,9 +131,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 9) {
             //ammo spawns in vault 2
@@ -145,9 +145,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 10) {
             //ammo spawns in vault 2
@@ -159,9 +159,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 11) {
             //ammo spawns in vault 2
@@ -173,9 +173,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 12) {
             //ammo spawns in vault 2
@@ -187,9 +187,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 13) {
             //ammo spawns in vault 3
@@ -201,9 +201,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 14) {
             //ammo spawns in vault 3
@@ -215,9 +215,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 15) {
             //ammo spawns in vault 3
@@ -229,9 +229,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 4
-            weapon.transform.position = new Vector3(vault4x - 2f, 10.375f, vault4z);
+            weapon.transform.position = new Vector3(vault4x - 2f, 10.75f, vault4z);
             weapon.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
         } else if (randomNum <= 16) {
             //ammo spawns in vault 3
@@ -243,9 +243,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 4
             bomb.transform.position = new Vector3(vault4x, 12f, vault4z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 17) {
             //ammo spawns in vault 3
@@ -257,9 +257,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 18) {
             //ammo spawns in vault 3
@@ -271,9 +271,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault4x - 5f, 12f, vault4z + 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 19) {
             //ammo spawns in vault 4
@@ -285,9 +285,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 20) {
             //ammo spawns in vault 4
@@ -299,9 +299,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault1x + 5f, 2f, vault1z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 21) {
             //ammo spawns in vault 4
@@ -313,9 +313,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 3
             bomb.transform.position = new Vector3(vault3x, 12f, vault3z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 22) {
             //ammo spawns in vault 4
@@ -327,9 +327,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault2x + 5f, 2f, vault2z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 3
-            weapon.transform.position = new Vector3(vault3x, 10.375f, vault3z + 2f);
+            weapon.transform.position = new Vector3(vault3x, 10.75f, vault3z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else if (randomNum <= 23) {
             //ammo spawns in vault 4
@@ -341,9 +341,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 1
             bomb.transform.position = new Vector3(vault1x, 2f, vault1z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 2
-            weapon.transform.position = new Vector3(vault2x, .375f, vault2z + 2f);
+            weapon.transform.position = new Vector3(vault2x, .75f, vault2z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         } else {
             //ammo spawns in vault 4
@@ -355,9 +355,9 @@ public class SpawnVaultContents : MonoBehaviour {
             healable3.transform.position = new Vector3(vault3x + 5f, 12f, vault3z - 5f);
             //bomb spawns in vault 2
             bomb.transform.position = new Vector3(vault2x, 2f, vault2z);
-            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            bomb.transform.localRotation = Quaternion.Euler(0f, 90f, 90f);
             //weapon spawns in vault 1
-            weapon.transform.position = new Vector3(vault1x, .375f, vault1z + 2f);
+            weapon.transform.position = new Vector3(vault1x, .75f, vault1z + 2f);
             weapon.transform.localRotation = Quaternion.Euler(0f, 180f, 90f);
         }
     }
