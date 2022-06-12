@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
-//this was made partially with a tutorial
+//this was made partially with a tutorial; the tutorial is : Introduction to AUDIO in Unity by Brackeys
+//is an audio manager that allows me to play a specific sound from multiple sounds attached to one object
 
 public class AudioManager : MonoBehaviour {
 

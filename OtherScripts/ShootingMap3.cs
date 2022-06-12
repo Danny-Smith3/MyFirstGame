@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this script handles the act of shooting for both the enemies and the player
-//needs a direction, starting point, and a name of the one who fired the shot to activate
-//the drawing of the trail after the shot was done with a tutorial
+//this script is basically the same as the other shooting script except that the enemy has a different health script for map3 because there are no keycards
 
-public class Shooting : MonoBehaviour {
+public class ShootingMap3 : MonoBehaviour {
     public TrailRenderer trail;
     public ParticleSystem impact;
     public int playerDamage = 20;
@@ -16,17 +14,17 @@ public class Shooting : MonoBehaviour {
             TrailRenderer gunTrail = Instantiate(trail, position, Quaternion.identity);
             StartCoroutine(spawnTrail(gunTrail, hit));
             if (hit.transform.tag == "Enemy" && name == "Player") {
-                Health enemy = hit.transform.GetComponent<Health>();
+                HealthMap3 enemy = hit.transform.GetComponent<HealthMap3>();
                 enemy.takeDamage(playerDamage);
             }
             if (hit.transform.name == "Player" && name == "Enemy") {
-                PlayerHealth health = hit.transform.GetComponent<PlayerHealth>();
+                PlayerHealthMap3 health = hit.transform.GetComponent<PlayerHealthMap3>();
                 health.takeDamage(20);
             }
         }
     }
 
-    //this part is from a tutorial; the tutorial is: Add Bullet Tracers To Your Hitscan Guns by Llam Academy
+    //this part is from a tutorial
     private IEnumerator spawnTrail(TrailRenderer shotTrail, RaycastHit hit) {
         float time = 0f;
         Vector3 startPosition = shotTrail.transform.position;

@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
-//this was made from a tutorial
+//this was made from a tutorial; the tutorial is: Introduction to AUDIO in Unity by Brackeys
+//this a script for one specific sound that could go inside the audio manager
 
 [System.Serializable]
 public class Sound {

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 
 //this script keeps track of the timer seen at the top of the UI, disables the bomb once interacted with, and if the time ever reaches 0 the game ends
-//this is specific to map1 because of the different starting times due to the different sizes of maps
+//this is specific to map2 because of the different starting times due to the different sizes of maps
 
-public class Timer : MonoBehaviour {
+public class TimerMap2 : MonoBehaviour {
 
     public TMP_Text timerText;
     private float timeBeforeDetonate;
@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        timeBeforeDetonate = 120f;
+        timeBeforeDetonate = 270f;
     }
 
     // Update is called once per frame
@@ -44,9 +44,15 @@ public class Timer : MonoBehaviour {
             } else if (timeBeforeDetonate < 120f) {
                 secondsPastMinute = timeBeforeDetonate - 60f;
                 timerText.text = "Bomb Timer: 1:" + Mathf.Round(secondsPastMinute).ToString();
-            } else {
+            } else if (timeBeforeDetonate < 180f) {
                 secondsPastMinute = timeBeforeDetonate - 120f;
                 timerText.text = "Bomb Timer: 2:" + Mathf.Round(secondsPastMinute).ToString();
+            } else if (timeBeforeDetonate < 240f) {
+                secondsPastMinute = timeBeforeDetonate - 180f;
+                timerText.text = "Bomb Timer: 3:" + Mathf.Round(secondsPastMinute).ToString();
+            } else {
+                secondsPastMinute = timeBeforeDetonate - 240f;
+                timerText.text = "Bomb Timer: 4:" + Mathf.Round(secondsPastMinute).ToString();
             }
         }
     }
@@ -55,7 +61,7 @@ public class Timer : MonoBehaviour {
     public void bombDisable() {
         bombEnabled = false;
         GameObject player = GameObject.Find("Player");
-        PlayerHealth health = player.GetComponent<PlayerHealth>();
+        PlayerHealthMap2 health = player.GetComponent<PlayerHealthMap2>();
         health.didWin = won;
         health.startEndGame();
     }

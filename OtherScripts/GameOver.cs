@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
 
+//this script displays the game over panel and whatever outcome happened in the game
+
 public class GameOver : MonoBehaviour {
 
     public GameObject gameOverPanel;

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//this script displays the dropped keycard on map1 after the enemy who possessed it dies
+
 public class Show : MonoBehaviour {
 
     public Transform enemy;
@@ -11,13 +13,13 @@ public class Show : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        transform.position = enemy.position;
         isEnemyAlive = true;
         isShowing = false;
         rend.enabled = false;
     }
 
     // Update is called once per frame
+    // moves the keycard with the enemy
     void Update() {
         if (isEnemyAlive) {
             transform.position = enemy.position;
@@ -27,6 +29,7 @@ public class Show : MonoBehaviour {
         }
     }
 
+    //dispalys the card
     public void showKey(bool showing) {
         isShowing = showing;
         rend.enabled = showing;

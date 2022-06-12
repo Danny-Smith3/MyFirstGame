@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is used for map 1 
+//randomly picks one tower and positions the ammo there
+//it has only one use which is why there is an ammoBoxUsed variable
+
 public class AmmoBox : MonoBehaviour {
     private bool ammoBoxUsed = false;
 

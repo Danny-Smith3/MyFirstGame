@@ -6,7 +6,7 @@ using UnityEngine;
 //needs a direction, starting point, and a name of the one who fired the shot to activate
 //the drawing of the trail after the shot was done with a tutorial
 
-public class Shooting : MonoBehaviour {
+public class ShootingMap2 : MonoBehaviour {
     public TrailRenderer trail;
     public ParticleSystem impact;
     public int playerDamage = 20;
@@ -16,11 +16,11 @@ public class Shooting : MonoBehaviour {
             TrailRenderer gunTrail = Instantiate(trail, position, Quaternion.identity);
             StartCoroutine(spawnTrail(gunTrail, hit));
             if (hit.transform.tag == "Enemy" && name == "Player") {
-                Health enemy = hit.transform.GetComponent<Health>();
+                HealthMap2 enemy = hit.transform.GetComponent<HealthMap2>();
                 enemy.takeDamage(playerDamage);
             }
             if (hit.transform.name == "Player" && name == "Enemy") {
-                PlayerHealth health = hit.transform.GetComponent<PlayerHealth>();
+                PlayerHealthMap2 health = hit.transform.GetComponent<PlayerHealthMap2>();
                 health.takeDamage(20);
             }
         }

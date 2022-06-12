@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script moves the bomb to the correct location for map1
+
 public class SpawnBomb : MonoBehaviour {
     public float spawnNumber = -1f;
 

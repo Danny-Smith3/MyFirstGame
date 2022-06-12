@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script moves the forcefield to the correct position on map 1 out of 3 possible positions
+//the spawn bomb script is related to this one
+//the spawn keycard reader is related to this one
+//after the spawn point is chosen in this script it is sent out to those other two scripts
+
 public class Spawn : MonoBehaviour {
     private float spawnNumber;
     public SpawnKeycardReader reader;

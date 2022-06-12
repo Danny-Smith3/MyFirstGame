@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//spawns in the keycard reader for map1
+
 public class SpawnKeycardReader : MonoBehaviour {
     public float spawnNumber = -1f;
 
