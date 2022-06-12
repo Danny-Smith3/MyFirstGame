@@ -8,7 +8,7 @@ using TMPro;
 //the shoot and reload methods for the enemies are similar to this one
 //this is used for all maps
 
-public class GunScript : MonoBehaviour {
+public class GunScriptMap3 : MonoBehaviour {
     
     public Transform playerCamera;
     public TMP_Text ammoInGun;
@@ -77,7 +77,7 @@ public class GunScript : MonoBehaviour {
         direction += new Vector3(Random.Range(-bloom.x, bloom.x), Random.Range(-bloom.y, bloom.y), Random.Range(-bloom.z, bloom.z));
         //not sure yet why normalizing a vector is neccessary after changing it
         direction.Normalize();
-        Shooting shot = gameObject.GetComponent<Shooting>();
+        ShootingMap3 shot = gameObject.GetComponent<ShootingMap3>();
         shot.Shoot(direction, playerCamera.transform.position, "Player");
     }
 

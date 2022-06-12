@@ -8,7 +8,7 @@ using TMPro;
 //the shoot and reload methods for the enemies are similar to this one
 //this is used for all maps
 
-public class GunScript : MonoBehaviour {
+public class GunScriptMap2 : MonoBehaviour {
     
     public Transform playerCamera;
     public TMP_Text ammoInGun;
@@ -25,7 +25,8 @@ public class GunScript : MonoBehaviour {
     public bool gameOver = false;
     private AudioManager audio;
     public bool isAlive = true;
-    public PauseGame pauseScript;
+    public PauseGameMap2 pauseScript;
+    public InventoryMap2 inventory;
 
     void Start() {
         ammoInGun.text = "30";
@@ -47,7 +48,7 @@ public class GunScript : MonoBehaviour {
         if (isReloading) {
             return;
         }
-        if (Input.GetKeyDown("r") && isAlive && ammoIn < 30 && !pauseScript.isPaused) {
+        if (Input.GetKeyDown("r") && isAlive && ammoIn < 30 && !pauseScript.isPaused && !inventory.inventoryOpen) {
             StartCoroutine(Reload()); 
             return;
         }
@@ -55,7 +56,7 @@ public class GunScript : MonoBehaviour {
             StartCoroutine(Reload());
             return;
         }
-        if (Input.GetButton("Fire1") && ammoIn > 0 && Time.time > timeToFire && isAlive && !pauseScript.isPaused) {
+        if (Input.GetButton("Fire1") && ammoIn > 0 && Time.time > timeToFire && isAlive && !pauseScript.isPaused && !inventory.inventoryOpen) {
             //this way of calculating fire rate was from a tutorial. Originally wouldn't shoot unless timeToFire = 0 and wouldn't increment timeToFire by -1 every frame
             timeToFire = Time.time + 1/fireRate;
             ShootShot();
@@ -77,7 +78,7 @@ public class GunScript : MonoBehaviour {
         direction += new Vector3(Random.Range(-bloom.x, bloom.x), Random.Range(-bloom.y, bloom.y), Random.Range(-bloom.z, bloom.z));
         //not sure yet why normalizing a vector is neccessary after changing it
         direction.Normalize();
-        Shooting shot = gameObject.GetComponent<Shooting>();
+        ShootingMap2 shot = gameObject.GetComponent<ShootingMap2>();
         shot.Shoot(direction, playerCamera.transform.position, "Player");
     }
 

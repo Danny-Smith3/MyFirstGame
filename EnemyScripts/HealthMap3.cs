@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this script is responsible for the enemy health system on 1
+//this script is for enemy health on map3
+//is simpler than the enemy health for map1 because there is no keycards
 
-public class Health : MonoBehaviour {
+public class HealthMap3 : MonoBehaviour {
 
     private int health;
-    public GameObject keycard;
-    public bool hasKey = false;
 
     void Start() {
-        keycard = GameObject.Find("Keycard");
         health = 100;
     }
 
@@ -19,11 +17,8 @@ public class Health : MonoBehaviour {
     void Update() {
         if (health <= 0) {
             //death animation might be implemented later
-            if (hasKey) {
-                dropKeyCard();
-            }
             GameObject player = GameObject.Find("Player");
-            GunScript playerGun = player.GetComponent<GunScript>();
+            GunScriptMap3 playerGun = player.GetComponent<GunScriptMap3>();
             playerGun.killConfirmed();
             Destroy(gameObject);
         }
@@ -31,11 +26,5 @@ public class Health : MonoBehaviour {
 
     public void takeDamage(int damage) {
         health -= damage;
-    }
-
-    private void dropKeyCard() {
-        Show key = keycard.GetComponent<Show>();
-        key.enemyAlive(false);
-        key.showKey(true);
     }
 }

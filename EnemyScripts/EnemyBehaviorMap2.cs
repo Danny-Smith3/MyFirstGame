@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-//this script handles the behavior of enemies on map1. Is similar to other enemy behabiors with the difference being it is a 2 floor map
+//this script handles the behavior of enemies on map2. Is similar to other enemy behabiors with the difference being it is a 2 floor map
 //general idea is that a point on the map is selected to be a patrol destination for an enemy. Once that is reached they get a new one. If they encounter the player on the way then they attack the player
 
-public class EnemyBehavior : MonoBehaviour {
+public class EnemyBehaviorMap2 : MonoBehaviour {
 
     public Transform playerTransform;
-    public Transform bombTransform;
     public NavMeshAgent navAgent;
-    private Vector3 bloom = new Vector3(0.0785f, 0.0785f, 0.0785f);
+    private Vector3 bloom = new Vector3(0.0795f, 0.0795f, 0.0795f);
     private int ammo = 30;
     private float fireRate = 5f;
     private float timeToFire = 0f;
@@ -24,11 +23,17 @@ public class EnemyBehavior : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        GameObject bomb = GameObject.Find("Bomb");
         GameObject player = GameObject.Find("Player");
-        bombTransform = bomb.GetComponent<Transform>();
         playerTransform = player.GetComponent<Transform>();
-        patrolDestination = new Vector3(Random.Range(-60f, 60f), bombTransform.position.y, Random.Range(-60f, 60f));
+
+        //this change accounts for the 2 floors unlike on map1
+        float randomNum = Mathf.Round(Random.value * 2);
+        if (randomNum <= 1) {
+            patrolDestination = new Vector3(Random.Range(-100f, 100f), 3f, Random.Range(-50f, 50f));
+        } else {
+            patrolDestination = new Vector3(Random.Range(-100f, 100f), 13f, Random.Range(-50f, 50f));
+        }
+
         navAgent.destination = patrolDestination;
         distanceToPatrolTarget = Vector3.Distance(transform.position, patrolDestination);
         distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
@@ -47,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour {
             return;
         }
         distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
-        if (distanceToPlayer < 57.5f) {
+        if (distanceToPlayer < 50 && Mathf.Abs(transform.position.y - playerTransform.position.y) < 1) {
             if (distanceToPlayer < 50f) {
                 //attack
                 navAgent.destination = playerTransform.position;
@@ -63,11 +68,18 @@ public class EnemyBehavior : MonoBehaviour {
         } else {
             //roam
             distanceToPatrolTarget = Vector3.Distance(transform.position, patrolDestination);
-            if (distanceToPatrolTarget < 7f) {
+            //checks to see if reached destination
+            if (distanceToPatrolTarget < 7.5f) {
                 travelingToDestination = false;
             }
+            //if reached destination give new destination
             if (!travelingToDestination) {
-                patrolDestination = new Vector3(Random.Range(-60f, 60f), bombTransform.position.y, Random.Range(-60f, 60f));
+                float randomNum = Mathf.Round(Random.value * 2);
+                if (randomNum <= 1) {
+                    patrolDestination = new Vector3(Random.Range(-100f, 100f), 3f, Random.Range(-50f, 50f));
+                } else {
+                    patrolDestination = new Vector3(Random.Range(-100f, 100f), 13f, Random.Range(-50f, 50f));
+                }
                 navAgent.destination = patrolDestination;
                 distanceToPatrolTarget = Vector3.Distance(transform.position, patrolDestination);
                 travelingToDestination = true;
@@ -82,7 +94,7 @@ public class EnemyBehavior : MonoBehaviour {
         direction += new Vector3(Random.Range(-bloom.x, bloom.x), Random.Range(-bloom.y, bloom.y), Random.Range(-bloom.z, bloom.z));
         //not sure yet why normalizing a vector is neccessary after adding bloom/variance
         direction.Normalize();
-        Shooting shot = gameObject.GetComponent<Shooting>();
+        ShootingMap2 shot = gameObject.GetComponent<ShootingMap2>();
         Vector3 position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
         //play shot sound
         audio.playSound("Shoot");

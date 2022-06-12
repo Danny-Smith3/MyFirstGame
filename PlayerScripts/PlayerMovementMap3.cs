@@ -5,7 +5,9 @@ using UnityEngine;
 //this code was made following a toutorial on the youtube channel Brackeys
 //the name of the video is: FIRST PERSON MOVEMENT in Unity - FPS Controller
 
-public class PlayerMovement : MonoBehaviour {
+//had to make a seperate player movement script for map3 because of the way I added the slow water feature
+
+public class PlayerMovementMap3 : MonoBehaviour {
     
     //values of gravity and speed were adjusted from the tutorial to fit my preference
     public CharacterController controller;
@@ -39,6 +41,14 @@ public class PlayerMovement : MonoBehaviour {
         //handles input for WASD/movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        //if the player is below the water level (therefore touching water) then slow the player down
+        //found out this value by moving the player to the water
+        if (gameObject.transform.position.y < 8.5f) {
+            speed = 3f;
+        } else {
+            speed = 15f;
+        }
 
         //actually moves the character
         Vector3 move = (transform.right * x) + (transform.forward * z);

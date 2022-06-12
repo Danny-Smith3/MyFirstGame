@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this script is responsible for the enemy health system on 1
+//this script is responsible for the enemy health system on map 2
 
-public class Health : MonoBehaviour {
+public class HealthMap2 : MonoBehaviour {
 
     private int health;
     public GameObject keycard;
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour {
                 dropKeyCard();
             }
             GameObject player = GameObject.Find("Player");
-            GunScript playerGun = player.GetComponent<GunScript>();
+            GunScriptMap2 playerGun = player.GetComponent<GunScriptMap2>();
             playerGun.killConfirmed();
             Destroy(gameObject);
         }

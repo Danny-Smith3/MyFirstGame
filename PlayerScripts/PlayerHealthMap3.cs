@@ -4,11 +4,12 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-//this script is for player health for map1
+//this script is for player health for map2
+//needed seperate player health scripts for different maps because there are different interact scripts for different maps. The functionality other than that is the same
 //updates the value of health in the UI. Also helps the healthBarImage script to update the healthbar
 //Also shuts down a lot of things once the game is over so that there is no sound or interaction once the game panel shows up
 
-public class PlayerHealth : MonoBehaviour {
+public class PlayerHealthMap3 : MonoBehaviour {
 
     public int health = 100;
     public bool didWin;
@@ -17,9 +18,9 @@ public class PlayerHealth : MonoBehaviour {
     public TMP_Text healthText;
     public GameObject healthBarImage;
     private HealthBarImage healthBar;
-    public PlayerMovement playerMovement;
-    public GunScript gun;
-    public Interact interactScript;
+    public PlayerMovementMap3 playerMovement;
+    public GunScriptMap3 gun;
+    public InteractMap3 interactScript;
 
     void Start() {
         healthBar = healthBarImage.GetComponent<HealthBarImage>();
